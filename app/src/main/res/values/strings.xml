@@ -8,4 +8,20 @@
     <string name="status_looking">Смотрю</string>
     <string name="status_speaking">Говорю</string>
     <string name="status_offline">Нет связи</string>
+
+    <!-- System phrases (MOB-11): the same texts as phrases/phrases.yaml, the voice is res/raw/phrase_<id>.wav -->
+    <string name="phrase_error_bad_request">Ошибка запроса</string>
+    <string name="phrase_error_unsupported_protocol">Обновите приложение</string>
+    <string name="phrase_error_question_too_long">Слишком длинный вопрос</string>
+    <string name="phrase_error_busy">Сервер занят, попробуйте ещё раз</string>
+    <string name="phrase_error_asr_empty">Не расслышал вопрос</string>
+    <string name="phrase_error_asr_unavailable">Не могу распознать вопрос</string>
+    <string name="phrase_error_detector_unavailable">Не удалось рассмотреть обстановку</string>
+    <string name="phrase_error_upstream_timeout">Сервер не ответил вовремя</string>
+    <string name="phrase_error_internal">Ошибка сервера</string>
+    <string name="phrase_no_connection">Нет связи с сервером</string>
+    <string name="phrase_passive_on">Пассивный режим включён</string>
+    <string name="phrase_passive_off">Пассивный режим выключен</string>
+    <string name="phrase_permission_rationale">Ассистенту нужны камера, чтобы видеть обстановку, и микрофон, чтобы слышать вопросы. Сейчас телефон попросит разрешение.</string>
+    <string name="phrase_permission_denied">Без камеры и микрофона ассистент не работает. Откройте настройки телефона, раздел приложений, выберите Ассистент, затем разрешения, и включите камеру и микрофон.</string>
 </resources>
