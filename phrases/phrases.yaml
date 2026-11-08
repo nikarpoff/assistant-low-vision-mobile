@@ -1,0 +1,29 @@
+# Системные фразы приложения (MOB-11, PROTO-11): id: текст.
+# id - имя ресурса Android [a-z][a-z0-9_]*: WAV лежит в app/src/main/res/raw/phrase_<id>.wav,
+# тот же текст - строка phrase_<id> в app/src/main/res/values/strings.xml.
+# WAV готовит tts-service (TTS-8):
+#   cd tts-service && uv run scripts/render_phrases.py \
+#     --phrases ../assistant-low-vision-mobile/phrases/phrases.yaml \
+#     --out ../assistant-low-vision-mobile/app/src/main/res/raw --backend <бэкенд>
+
+# Ошибки по кодам PROTO-11
+error_bad_request: "Ошибка запроса"
+error_unsupported_protocol: "Обновите приложение"
+error_question_too_long: "Слишком длинный вопрос"
+error_busy: "Сервер занят, попробуйте ещё раз"
+error_asr_empty: "Не расслышал вопрос"
+error_asr_unavailable: "Не могу распознать вопрос"
+error_detector_unavailable: "Не удалось рассмотреть обстановку"
+error_upstream_timeout: "Сервер не ответил вовремя"
+error_internal: "Ошибка сервера"
+
+# Нет соединения (E13 без сообщения сервера, MOB-8)
+no_connection: "Нет связи с сервером"
+
+# Пассивный режим (MOB-14)
+passive_on: "Пассивный режим включён"
+passive_off: "Пассивный режим выключен"
+
+# Разрешения (MOB-15)
+permission_rationale: "Ассистенту нужны камера, чтобы видеть обстановку, и микрофон, чтобы слышать вопросы. Сейчас телефон попросит разрешение."
+permission_denied: "Без камеры и микрофона ассистент не работает. Откройте настройки телефона, раздел приложений, выберите Ассистент, затем разрешения, и включите камеру и микрофон."
