@@ -4,6 +4,12 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
 }
 
+/** Gradle property [name] as a Java string literal for BuildConfig, empty when it is not set. */
+fun buildConfigString(name: String): String {
+    val value = providers.gradleProperty(name).orNull.orEmpty()
+    return "\"" + value.replace("\\", "\\\\").replace("\"", "\\\"") + "\""
+}
+
 android {
     namespace = "io.github.nikarpoff.alv"
     compileSdk = 37
@@ -15,6 +21,11 @@ android {
         targetSdk = 37
         versionCode = 1
         versionName = "0.1.0"
+
+        // Defaults of the settings (MOB-9), set at build time: -PalvServerUrl=... -PalvDeviceToken=...
+        // or the same keys in ~/.gradle/gradle.properties, never in git
+        buildConfigField("String", "DEFAULT_SERVER_URL", buildConfigString("alvServerUrl"))
+        buildConfigField("String", "DEFAULT_DEVICE_TOKEN", buildConfigString("alvDeviceToken"))
     }
 
     buildTypes {
@@ -34,6 +45,7 @@ android {
 
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 

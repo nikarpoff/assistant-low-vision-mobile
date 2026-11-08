@@ -24,4 +24,30 @@
     <string name="phrase_passive_off">Пассивный режим выключен</string>
     <string name="phrase_permission_rationale">Ассистенту нужны камера, чтобы видеть обстановку, и микрофон, чтобы слышать вопросы. Сейчас телефон попросит разрешение.</string>
     <string name="phrase_permission_denied">Без камеры и микрофона ассистент не работает. Откройте настройки телефона, раздел приложений, выберите Ассистент, затем разрешения, и включите камеру и микрофон.</string>
+
+    <!-- Main surface for TalkBack (MOB-10): one element and its actions -->
+    <string name="surface_description">Ассистент. Двойное касание - описать сцену</string>
+    <string name="action_ask">Задать вопрос</string>
+    <string name="action_repeat">Повторить</string>
+    <string name="action_passive">Пассивный режим</string>
+    <string name="action_stop">Стоп</string>
+    <string name="action_settings">Настройки</string>
+
+    <!-- Settings screen (MOB-9) -->
+    <string name="settings_title">Настройки</string>
+    <string name="settings_server_url">Адрес сервера</string>
+    <string name="settings_device_token">Токен устройства</string>
+    <string name="settings_passive_mode">Пассивный режим</string>
+    <string name="settings_label">Код участника испытаний</string>
+    <string name="settings_debug_panel">Отладочная панель с задержками</string>
+    <string name="settings_save">Сохранить</string>
+    <string name="settings_cancel">Отмена</string>
+
+    <!-- Debug panel (MOB-13) -->
+    <string name="debug_title">Задержки, мс</string>
+    <string name="debug_empty">Замеров пока нет</string>
+
+    <!-- Launcher shortcut to the settings -->
+    <string name="shortcut_settings_short">Настройки</string>
+    <string name="shortcut_settings_long">Настройки ассистента</string>
 </resources>
