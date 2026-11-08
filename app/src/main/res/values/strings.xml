@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="ru">
+    <string name="app_name">Ассистент</string>
+
+    <!-- Statuses on the screen for low vision users (MOB-12) -->
+    <string name="status_idle">Ожидание</string>
+    <string name="status_listening">Слушаю</string>
+    <string name="status_looking">Смотрю</string>
+    <string name="status_speaking">Говорю</string>
+    <string name="status_offline">Нет связи</string>
+</resources>
