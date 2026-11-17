@@ -73,7 +73,16 @@ sdk.dir=/opt/android-sdk
 python3 tools/earcons.py   # перезаписывает app/src/main/res/raw/earcon_*.wav
 ```
 
-Системные фразы (`res/raw/phrase_*.wav`) готовит `tts-service` по списку `phrases/phrases.yaml`, команда - в заголовке этого файла.
+Системные фразы (`res/raw/phrase_*.wav`) готовит `tts-service` по списку `phrases/phrases.yaml` (TTS-8): тем же путём, что и ответы, 24 кГц, моно, 16 бит, всего около 1,9 МБ. Голос - мужской голос Piper `ru_RU-denis-medium`:
+
+```bash
+cd tts-service && uv run scripts/render_phrases.py \
+  --phrases ../assistant-low-vision-mobile/phrases/phrases.yaml \
+  --out ../assistant-low-vision-mobile/app/src/main/res/raw \
+  --backend piper --model ru_RU-denis-medium --voice denis --sample-rate 24000
+```
+
+Голос выбран по лицензии: WAV распространяются в этом репозитории под Apache-2.0, поэтому лицензия модели должна разрешать распространять синтезированный звук. Модели Silero (CC BY-NC-SA 4.0), F5-TTS_RUSSIAN (CC BY-NC 4.0) и голос Piper `ruslan` (CC BY-NC-SA 4.0) это запрещают, у голоса `irina` лицензия данных не указана. Если для ответов выбран другой голос с подходящей лицензией, фразы перезаписываются им той же командой, чтобы приложение звучало одним голосом.
 
 ### Память
 
@@ -165,3 +174,5 @@ Model не зависит от `android.*`, поэтому проверяетс�
 ## Лицензия
 
 [Apache License 2.0](LICENSE).
+
+Системные фразы `res/raw/phrase_*.wav` синтезированы голосом Piper `ru_RU-denis-medium` из репозитория `rhasspy/piper-voices` (MIT; голос обучен на данных под CC0 от базовой модели под CC0). Программа синтеза `piper-tts` (GPL-3.0) в приложение не входит: в нём только звук, который она синтезировала.
