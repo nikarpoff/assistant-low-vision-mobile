@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launcher shortcut to the settings screen (MOB-9): the main screen has no buttons -->
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:shortcutId="settings"
+        android:shortcutLongLabel="@string/shortcut_settings_long"
+        android:shortcutShortLabel="@string/shortcut_settings_short">
+        <intent
+            android:action="io.github.nikarpoff.alv.action.SETTINGS"
+            android:targetClass="io.github.nikarpoff.alv.view.MainActivity"
+            android:targetPackage="io.github.nikarpoff.alv" />
+    </shortcut>
+</shortcuts>

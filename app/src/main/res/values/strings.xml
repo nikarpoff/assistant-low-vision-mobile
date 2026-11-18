@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="ru">
+    <string name="app_name">Ассистент</string>
+
+    <!-- Statuses on the screen for low vision users (MOB-12) -->
+    <string name="status_idle">Ожидание</string>
+    <string name="status_listening">Слушаю</string>
+    <string name="status_looking">Смотрю</string>
+    <string name="status_speaking">Говорю</string>
+    <string name="status_offline">Нет связи</string>
+
+    <!-- System phrases (MOB-11): the same texts as phrases/phrases.yaml, the voice is res/raw/phrase_<id>.wav -->
+    <string name="phrase_error_bad_request">Ошибка запроса</string>
+    <string name="phrase_error_unsupported_protocol">Обновите приложение</string>
+    <string name="phrase_error_question_too_long">Слишком длинный вопрос</string>
+    <string name="phrase_error_busy">Сервер занят, попробуйте ещё раз</string>
+    <string name="phrase_error_asr_empty">Не расслышал вопрос</string>
+    <string name="phrase_error_asr_unavailable">Не могу распознать вопрос</string>
+    <string name="phrase_error_detector_unavailable">Не удалось рассмотреть обстановку</string>
+    <string name="phrase_error_upstream_timeout">Сервер не ответил вовремя</string>
+    <string name="phrase_error_internal">Ошибка сервера</string>
+    <string name="phrase_no_connection">Нет связи с сервером</string>
+    <string name="phrase_passive_on">Пассивный режим включён</string>
+    <string name="phrase_passive_off">Пассивный режим выключен</string>
+    <string name="phrase_permission_rationale">Ассистенту нужны камера, чтобы видеть обстановку, и микрофон, чтобы слышать вопросы. Сейчас телефон попросит разрешение.</string>
+    <string name="phrase_permission_denied">Без камеры и микрофона ассистент не работает. Откройте настройки телефона, раздел приложений, выберите Ассистент, затем разрешения, и включите камеру и микрофон.</string>
+
+    <!-- Main surface for TalkBack (MOB-10): one element and its actions -->
+    <string name="surface_description">Ассистент. Двойное касание - описать сцену</string>
+    <string name="action_ask">Задать вопрос</string>
+    <string name="action_repeat">Повторить</string>
+    <string name="action_passive">Пассивный режим</string>
+    <string name="action_stop">Стоп</string>
+    <string name="action_settings">Настройки</string>
+
+    <!-- Settings screen (MOB-9) -->
+    <string name="settings_title">Настройки</string>
+    <string name="settings_server_url">Адрес сервера</string>
+    <string name="settings_device_token">Токен устройства</string>
+    <string name="settings_passive_mode">Пассивный режим</string>
+    <string name="settings_label">Код участника испытаний</string>
+    <string name="settings_debug_panel">Отладочная панель с задержками</string>
+    <string name="settings_save">Сохранить</string>
+    <string name="settings_cancel">Отмена</string>
+
+    <!-- Debug panel (MOB-13) -->
+    <string name="debug_title">Задержки, мс</string>
+    <string name="debug_empty">Замеров пока нет</string>
+
+    <!-- Launcher shortcut to the settings -->
+    <string name="shortcut_settings_short">Настройки</string>
+    <string name="shortcut_settings_long">Настройки ассистента</string>
+</resources>
